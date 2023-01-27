@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grph"
+    app:startDestination="@id/splashFragment3">
+
+    <fragment
+        android:id="@+id/siginInFragment"
+        android:name="com.tec.firebase_notesapp.SiginInFragment"
+        android:label="fragment_sigin_in"
+        tools:layout="@layout/fragment_sigin_in" >
+        <action
+            android:id="@+id/action_siginInFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/siginInFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_siginInFragment_to_singUpfragment"
+            app:destination="@id/singUpfragment"
+            app:popUpTo="@id/siginInFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.tec.firebase_notesapp.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/singUpfragment"
+        android:name="com.tec.firebase_notesapp.SingUpfragment"
+        android:label="fragment_sing_upfragment"
+        tools:layout="@layout/fragment_sing_upfragment" >
+        <action
+            android:id="@+id/action_singUpfragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/singUpfragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_singUpfragment_to_siginInFragment"
+            app:destination="@id/siginInFragment"
+            app:popUpTo="@id/singUpfragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment3"
+        android:name="com.tec.firebase_notesapp.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment3_to_siginInFragment2"
+            app:destination="@id/siginInFragment"
+            app:popUpTo="@id/splashFragment3"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_splashFragment3_to_homeFragment2"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment3"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>
